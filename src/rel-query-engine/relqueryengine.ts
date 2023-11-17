@@ -1,7 +1,21 @@
 import { RelPg } from "relpg";
 
 
+//#region /// RELQUERYENGINE TYPES \\\
+
+
+
 export enum Engines{
+     /**
+     * ### HostName
+     * 
+     * Server Ip address or Domain Name of postgresql database
+     * 
+     * ---
+     * - #### Option: `db_host`
+     * - #### Type: `string`
+     * - #### Default: `localhost`
+     */
     PGSQL="PGSQL",
     MYSQL="MYSQL",
     MSSQL="MSSQL"
@@ -29,8 +43,43 @@ type T_connectionList={
 
 type T_Connections = { [key: string]: any };
 
+ //#endregion
 
 
+
+
+//#region /// RELQUERYENGINE CLASS \\\
+/**
+* ## RelQueryEngine
+*
+* Allows managing multiple databases together for Relteco Relnode.
+* 
+* ---
+* 
+* ### Options
+* 
+* | OPTION              | TYPE                               | DEFAULT     | DESCRIPTION
+* | :-                  | :-                                 | :-          | :-
+* | **ConnectionList**  | array[T_connectionList]            | `[]`        | An array of objects of type T_connection objects containing database information
+* 
+*---
+* ### Example:
+*
+* ```ts
+* const {RelQueryEngine,Engines} = require("rel-query-engine")
+* 
+* const RQE =new RelQueryEngine(connectionList)
+* ```
+*
+* ```ts
+* import {RelQueryEngine,Engines} = from "rel-query-engine"
+* 
+* const RQE =new RelQueryEngine(connectionList)
+* ```
+* ---
+* 
+* Note: The localhost value assumes that Postgresql is installed on your system.
+*/
 export class RelQueryEngine {
     ConnectionList?:T_connectionList[]
     Connections?:T_Connections
@@ -78,4 +127,4 @@ export class RelQueryEngine {
 }
 
 
-
+ //#endregion
