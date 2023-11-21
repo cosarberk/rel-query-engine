@@ -52,6 +52,8 @@ const RQE =new RelQueryEngine(connectionList)
 
 ```
 
+
+
 ## ENGINE TYPES
 
 
@@ -75,6 +77,9 @@ Database engine types
 ```ts   
   Engines.PGSQL
 ```
+
+
+
 
 ## RELQUERYENGINE
 
@@ -155,6 +160,7 @@ const RQE =new RelQueryEngine(connectionList)
  
  returns database connections in memory
  > Return `Connections`
+
  ---
  
  - #### Type: `array[T_Connections] `
@@ -167,6 +173,8 @@ const RQE =new RelQueryEngine(connectionList)
 creates dynamic database connection object to connection list 
 
 and associates this object with `Connections`.
+
+---
 
 
 
