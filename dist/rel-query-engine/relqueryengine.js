@@ -94,7 +94,7 @@ var Engines;
 * ```
 * ---
 *
-* Note: The localhost value assumes that Postgresql is installed on your system.
+* Note: The localhost value assumes that Databases is installed on your system.
 */
 var RelQueryEngine = /** @class */ (function () {
     function RelQueryEngine(connectionList) {
@@ -106,6 +106,8 @@ var RelQueryEngine = /** @class */ (function () {
     * ### private CREATECONNECTIONS()
     *
     * creates dynamic database connection object to connection list
+    *
+    * Associates this object with `Connections`.
     *
     *
     */

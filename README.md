@@ -3,6 +3,11 @@ Allows managing multiple databases simultaneously for Relteco-Relnode.
 
 For now, it only supports PostgreSQL
 
+
+```sh
+npm i rel-query-engine
+```
+
 ## Quick Start
 
 ```ts
